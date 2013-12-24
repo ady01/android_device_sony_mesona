@@ -8,7 +8,9 @@ TARGET_USES_LEGACY_BOARD := true
 
 TARGET_SPECIFIC_HEADER_PATH += device/sony/mesona/include
 
-TARGET_KERNEL_CONFIG := cm_tamsui_mes_defconfig
+TARGET_CPU_VARIANT := cortex-a5
+
+TARGET_KERNEL_CONFIG := cyanogen_mes_defconfig
 BOARD_KERNEL_CMDLINE := device/sony/mesona/config/cmdline.txt
 
 # Wifi related defines
