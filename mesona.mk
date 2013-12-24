@@ -38,29 +38,19 @@ PRODUCT_AAPT_PREF_CONFIG := mdpi
 
 # Configuration scripts
 PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/config/init.device.rc:root/init.device.rc \
     device/sony/tamsui-common-legacy/prebuilt/logo_M.rle:root/logo.rle
 
 # USB function switching
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/config/init.device.rc:root/init.device.rc \
     $(LOCAL_PATH)/config/init.sony.usb.rc:root/init.sony.usb.rc
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/config/fstab.sony:root/fstab.sony
 
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/config/vold.fstab:system/etc/vold.fstab
-
 # Device specific part for two-stage boot
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/recovery/bootrec-device:recovery/bootrec-device
-
-# Ramdisk
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/prebuilt/rmt_storage:root/sbin/rmt_storage \
-    $(LOCAL_PATH)/prebuilt/ta_rmt_service:root/sbin/ta_rmt_service \
-    $(LOCAL_PATH)/prebuilt/tad:root/sbin/tad \
-    $(LOCAL_PATH)/prebuilt/wait4tad:root/sbin/wait4tad
 
 # Key layouts and touchscreen
 PRODUCT_COPY_FILES += \
