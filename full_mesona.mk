@@ -12,15 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-#
-# This file is the build configuration for a full Android
-# build for maguro hardware. This cleanly combines a set of
-# device-specific aspects (drivers) with a device-agnostic
-# product configuration (apps). Except for a few implementation
-# details, it only fundamentally contains two inherit-product
-# lines, full and maguro, hence its name.
-#
-#
+
  
 # Torch
 PRODUCT_PACKAGES := \
@@ -30,7 +22,7 @@ PRODUCT_PACKAGES := \
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Charging animation resources
-$(call inherit-product, device/sony/tamsui-common-legacy/prebuilt/resources-mdpi.mk)
+$(call inherit-product, device/sony/tamsui-common/prebuilt/resources-mdpi.mk)
 
 # Inherit from mesona device
 $(call inherit-product, device/sony/mesona/mesona.mk)
